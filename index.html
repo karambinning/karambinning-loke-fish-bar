@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loke Fish Bar — Cod &amp; chips on Loke Road, King&rsquo;s Lynn</title>
+<meta name="description" content="Traditional fish and chips, cooked the old-fashioned way. 19 Loke Road, King's Lynn, PE30 2AY. Open Thursday to Saturday. 01553 772001.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1B3A5C;
+  --ink-deep:#0F2542;
+  --paper:#F5EEDC;
+  --paper-warm:#EDE3CC;
+  --batter:#E3B341;
+  --batter-deep:#B6862A;
+  --rule:rgba(27,58,92,0.20);
+  --rule-light:rgba(245,238,220,0.22);
+  --display:"Big Shoulders Display","Arial Narrow",sans-serif;
+  --body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(15px,0.55vw + 13px,17px);
+  line-height:1.55;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* paper grain on cream surfaces */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.06  0 0 0 0 0.14  0 0 0 0 0.26  0 0 0 0.13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.55;
+  mix-blend-mode:multiply;
+}
+main, header, footer{position:relative;z-index:2}
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-weight:900;
+  line-height:.88;
+  letter-spacing:-0.005em;
+  text-transform:uppercase;
+  text-wrap:balance;
+}
+p{text-wrap:pretty;hyphens:auto}
+a{color:inherit}
+
+/* ────────────── nav ────────────── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--paper);
+  border-bottom:1px solid var(--rule);
+}
+.topbar__inner{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:14px clamp(18px,4vw,52px);
+  max-width:1400px;margin:0 auto;
+}
+.mark{
+  font-family:var(--display);
+  font-weight:900;
+  font-size:clamp(22px,2vw,28px);
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+  line-height:1;
+  display:flex;align-items:baseline;gap:8px;
+  text-decoration:none;
+}
+.mark .dot{color:var(--batter)}
+.nav{
+  display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);
+  font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.11em;
+}
+.nav a{
+  text-decoration:none;
+  padding:6px 0;
+  border-bottom:1.5px solid transparent;
+  transition:border-color .2s;
+}
+.nav a:hover{border-bottom-color:var(--ink)}
+.nav__cta{
+  background:var(--ink);color:var(--paper);
+  padding:10px 16px;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:0.08em;
+  font-size:12px;
+  text-transform:uppercase;
+  border-bottom:none;
+  transition:background .2s;
+}
+.nav__cta:hover{background:var(--batter);color:var(--ink);border-bottom:none}
+@media(max-width:760px){
+  .nav a:not(.nav__cta){display:none}
+}
+
+/* ────────────── hero ────────────── */
+.hero{
+  padding:clamp(40px,7vw,90px) clamp(18px,4vw,52px) clamp(30px,5vw,60px);
+  max-width:1400px;margin:0 auto;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;
+  margin-bottom:24px;
+}
+.eyebrow .pin{
+  display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--batter);
+  box-shadow:0 0 0 4px rgba(227,179,65,0.18);
+}
+.hero__title{
+  font-size:clamp(4.4rem,15vw,15rem);
+  letter-spacing:-0.025em;
+  line-height:.82;
+  margin-bottom:30px;
+}
+.hero__title .stack{display:block}
+.hero__title .stack--gold{color:var(--batter-deep);font-style:italic;font-weight:700;letter-spacing:-0.02em}
+.hero__grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:clamp(28px,4vw,64px);
+  align-items:end;
+  border-top:1.5px solid var(--ink);
+  padding-top:28px;
+}
+@media(max-width:780px){
+  .hero__grid{grid-template-columns:1fr;align-items:start}
+}
+.hero__lede{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(1.5rem,2.2vw,2.1rem);
+  line-height:1.1;
+  letter-spacing:-0.005em;
+  max-width:34ch;
+  text-transform:none;
+}
+.hero__lede em{
+  font-style:italic;
+  color:var(--batter-deep);
+  font-weight:700;
+}
+.hero__meta{
+  display:flex;flex-direction:column;gap:18px;
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:0.04em;
+}
+.hero__meta .row{
+  display:flex;flex-direction:column;gap:2px;
+}
+.hero__meta .label{
+  font-family:var(--display);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  font-size:11px;
+  color:var(--batter-deep);
+}
+.hero__meta .value{
+  font-size:17px;
+  font-weight:500;
+  font-family:var(--body);
+}
+.hero__meta a{
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-thickness:1.5px;
+  text-decoration-color:var(--batter);
+}
+.hero__meta a:hover{color:var(--batter-deep)}
+
+/* ────────────── marquee ────────────── */
+.marquee{
+  background:var(--ink);
+  color:var(--paper);
+  border-top:2px solid var(--batter);
+  border-bottom:2px solid var(--batter);
+  overflow:hidden;
+  padding:18px 0;
+}
+.marquee__track{
+  display:inline-flex;
+  white-space:nowrap;
+  animation:scroll 38s linear infinite;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(1.5rem,3vw,2.4rem);
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.marquee__track span{padding:0 28px}
+.marquee__track .sep{color:var(--batter)}
+@keyframes scroll{ to{ transform:translateX(-50%) } }
+
+/* ────────────── slabs ────────────── */
+.slab{
+  padding:clamp(60px,9vw,130px) clamp(18px,4vw,52px);
+}
+.slab--navy{background:var(--ink);color:var(--paper)}
+.slab--cream{background:var(--paper)}
+.slab--warm{background:var(--paper-warm)}
+.slab__inner{max-width:1200px;margin:0 auto}
+
+.section-head{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:24px;
+  align-items:center;
+  margin-bottom:clamp(36px,5vw,72px);
+}
+.section-head__num{
+  font-family:var(--display);
+  font-weight:500;
+  font-style:italic;
+  font-size:clamp(2rem,3.5vw,3rem);
+  color:var(--batter);
+}
+.section-head__title{
+  font-size:clamp(2.4rem,5.5vw,5.2rem);
+  letter-spacing:-0.018em;
+}
+
+/* ────────────── about ────────────── */
+.about__body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(36px,5vw,72px);
+  align-items:start;
+}
+@media(max-width:780px){.about__body{grid-template-columns:1fr}}
+.about__lede{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(1.6rem,2.6vw,2.4rem);
+  line-height:1.1;
+  letter-spacing:-0.005em;
+}
+.about__lede em{font-style:italic;font-weight:700;color:var(--batter)}
+.about__body p{
+  font-size:clamp(15px,1vw + 12px,17px);
+  margin-bottom:1.1em;
+  max-width:54ch;
+}
+.about__body p:last-child{margin-bottom:0}
+.callout{
+  margin-top:28px;
+  border-left:3px solid var(--batter);
+  padding:10px 0 10px 18px;
+  font-family:var(--display);
+  font-size:1.1rem;
+  font-weight:500;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+
+/* ────────────── menu / services ────────────── */
+.menu{
+  display:flex;flex-direction:column;
+  gap:clamp(28px,3.5vw,54px);
+}
+.menu__group{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:baseline;
+  column-gap:18px;
+  border-bottom:1.5px solid var(--rule);
+  padding-bottom:26px;
+}
+.menu__name{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(1.6rem,2.8vw,2.4rem);
+  letter-spacing:-0.005em;
+  text-transform:uppercase;
+}
+.menu__desc{
+  font-size:15px;
+  line-height:1.5;
+  padding-left:14px;
+  max-width:48ch;
+  color:var(--ink);
+  opacity:0.84;
+}
+.menu__tag{
+  font-family:var(--display);
+  font-style:italic;
+  font-weight:500;
+  color:var(--batter-deep);
+  font-size:1.05rem;
+  white-space:nowrap;
+}
+@media(max-width:760px){
+  .menu__group{grid-template-columns:1fr;row-gap:8px}
+  .menu__desc{padding-left:0}
+}
+
+.howto{
+  margin-top:clamp(38px,5vw,62px);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+@media(max-width:760px){.howto{grid-template-columns:1fr}}
+.howto__card{
+  background:var(--paper);
+  color:var(--ink);
+  border:1.5px solid var(--ink);
+  padding:24px 22px 26px;
+}
+.slab--cream .howto__card{background:var(--paper-warm)}
+.howto__num{
+  font-family:var(--display);
+  font-weight:500;
+  font-style:italic;
+  font-size:1.3rem;
+  color:var(--batter-deep);
+  margin-bottom:14px;
+}
+.howto__title{
+  font-size:1.6rem;
+  margin-bottom:8px;
+  letter-spacing:-0.005em;
+}
+.howto__body{font-size:14.5px;line-height:1.5}
+.howto__body a{
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-color:var(--batter);
+}
+
+/* ────────────── contact ────────────── */
+.contact__grid{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:clamp(28px,4vw,52px);
+}
+@media(max-width:860px){.contact__grid{grid-template-columns:1fr}}
+.contact__col h3{
+  font-size:1.05rem;
+  letter-spacing:0.18em;
+  margin-bottom:14px;
+  color:var(--batter);
+}
+.contact__list{
+  list-style:none;
+  display:flex;flex-direction:column;gap:24px;
+  margin-bottom:36px;
+}
+.contact__list li{display:flex;flex-direction:column;gap:4px}
+.contact__list .label{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--batter);
+}
+.contact__list .value{
+  font-size:clamp(1.4rem,2.2vw,1.9rem);
+  font-family:var(--display);
+  font-weight:500;
+  letter-spacing:-0.005em;
+  text-transform:none;
+}
+.contact__list a{
+  text-decoration:none;
+  border-bottom:2px solid var(--batter);
+  padding-bottom:2px;
+  transition:color .2s;
+}
+.contact__list a:hover{color:var(--batter)}
+
+.hours{
+  background:var(--paper);
+  color:var(--ink);
+  padding:22px 24px;
+  border-left:4px solid var(--batter);
+}
+.slab--cream .hours{background:var(--paper-warm)}
+.hours__title{
+  font-size:14px;
+  letter-spacing:0.18em;
+  margin-bottom:12px;
+  color:var(--batter-deep);
+}
+.hours__list{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.hours__list li{display:flex;justify-content:space-between;border-bottom:1px dotted var(--rule);padding:6px 0}
+.hours__list .closed{opacity:0.5;font-style:italic}
+.hours__list .day{font-family:var(--display);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
+
+.map{
+  background:var(--paper);
+  border:1.5px solid var(--paper);
+  aspect-ratio:4/3;
+  overflow:hidden;
+}
+.map iframe{
+  width:100%;height:100%;border:0;display:block;
+  filter:saturate(0.85) contrast(0.92);
+}
+
+/* ────────────── gallery placeholder ────────────── */
+.gallery__empty{
+  border:1.5px dashed var(--ink);
+  padding:clamp(48px,7vw,90px) 24px;
+  text-align:center;
+  position:relative;
+}
+.slab--navy .gallery__empty{border-color:var(--paper)}
+.gallery__line{
+  font-family:var(--display);
+  font-weight:500;
+  font-style:italic;
+  font-size:clamp(2.2rem,5vw,4.4rem);
+  line-height:1;
+  margin-bottom:14px;
+  color:var(--batter);
+}
+.gallery__sub{
+  font-size:14px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+
+/* ────────────── footer ────────────── */
+.foot{
+  background:var(--ink);
+  color:var(--paper);
+  padding:clamp(48px,6vw,80px) clamp(18px,4vw,52px) 32px;
+  border-top:6px solid var(--batter);
+}
+.foot__inner{max-width:1200px;margin:0 auto}
+.foot__name{
+  font-size:clamp(3.6rem,11vw,9rem);
+  letter-spacing:-0.02em;
+  line-height:.85;
+  margin-bottom:30px;
+}
+.foot__name .gold{color:var(--batter)}
+.foot__grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  padding:32px 0;
+  border-top:1px solid var(--rule-light);
+  border-bottom:1px solid var(--rule-light);
+}
+@media(max-width:760px){.foot__grid{grid-template-columns:1fr;gap:22px}}
+.foot__col h4{
+  font-size:12px;letter-spacing:0.22em;color:var(--batter);
+  margin-bottom:10px;
+}
+.foot__col p, .foot__col a{font-size:15px;line-height:1.55}
+.foot__col a{text-decoration:none;border-bottom:1px solid var(--batter)}
+.foot__bottom{
+  padding-top:24px;
+  font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  opacity:0.7;
+}
+
+/* scroll-driven reveals */
+@supports (animation-timeline: view()){
+  .reveal{
+    animation:rise both;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(28px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="mark" href="#top">Loke Fish Bar<span class="dot">.</span></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Find Us</a>
+      <a class="nav__cta" href="tel:+441553772001">01553 772001</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ───────────── HERO ───────────── -->
+  <section class="hero">
+    <div class="eyebrow"><span class="pin"></span> 19 Loke Road · King&rsquo;s Lynn · PE30 2AY</div>
+    <h1 class="hero__title"><span class="stack">Loke </span><span class="stack">Fish </span><span class="stack stack--gold">Bar</span></h1>
+    <div class="hero__grid">
+      <p class="hero__lede">
+        Cod and chips, cooked the <em>old-fashioned way</em>. Three days a week, from a small shop on Loke Road.
+      </p>
+      <div class="hero__meta">
+        <div class="row">
+          <span class="label">Open</span>
+          <span class="value">Thursday &middot; Friday &middot; Saturday<br>11:00 &ndash; 19:30</span>
+        </div>
+        <div class="row">
+          <span class="label">Order</span>
+          <span class="value"><a href="tel:+441553772001">01553&nbsp;772001</a> &middot; or via Just Eat / Deliveroo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── MARQUEE ───────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Open Thu Fri Sat</span><span class="sep">+</span>
+      <span>11:00&ndash;19:30</span><span class="sep">+</span>
+      <span>01553 772001</span><span class="sep">+</span>
+      <span>19 Loke Road PE30 2AY</span><span class="sep">+</span>
+      <span>Delivery via Just Eat &amp; Deliveroo</span><span class="sep">+</span>
+      <span>Eat In &middot; Take Away</span><span class="sep">+</span>
+      <span>Open Thu Fri Sat</span><span class="sep">+</span>
+      <span>11:00&ndash;19:30</span><span class="sep">+</span>
+      <span>01553 772001</span><span class="sep">+</span>
+      <span>19 Loke Road PE30 2AY</span><span class="sep">+</span>
+      <span>Delivery via Just Eat &amp; Deliveroo</span><span class="sep">+</span>
+      <span>Eat In &middot; Take Away</span><span class="sep">+</span>
+    </div>
+  </div>
+
+  <!-- ───────────── ABOUT ───────────── -->
+  <section class="slab slab--cream" id="about">
+    <div class="slab__inner">
+      <div class="section-head reveal">
+        <span class="section-head__num">01 /</span>
+        <h2 class="section-head__title">A proper chippy on Loke Road.</h2>
+      </div>
+      <div class="about__body reveal">
+        <p class="about__lede">
+          We&rsquo;re a small <em>takeaway and seat-in fish bar</em> on the corner of Loke Road in King&rsquo;s Lynn, doing one thing &mdash; fish and chips &mdash; the way our regulars expect them.
+        </p>
+        <div>
+          <p>Open three days a week: <strong>Thursday, Friday and Saturday</strong>, 11 in the morning until half-past seven at night. We&rsquo;re closed Sunday to Wednesday so we can keep the fryers fresh and the fish properly looked after.</p>
+          <p>Pop in for a sit-down portion, ring ahead for a takeaway, or order over on Just Eat or Deliveroo if you&rsquo;d rather not move from the sofa.</p>
+          <p class="callout">Food hygiene rating &mdash; very good (FSA, inspected Feb 2025).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── MENU / SERVICES ───────────── -->
+  <section class="slab slab--warm" id="menu">
+    <div class="slab__inner">
+      <div class="section-head reveal">
+        <span class="section-head__num">02 /</span>
+        <h2 class="section-head__title">What we do.</h2>
+      </div>
+
+      <div class="menu reveal">
+        <div class="menu__group">
+          <div class="menu__name">Fish &amp; Chips</div>
+          <div class="menu__desc">Fresh cod, hand-battered, fried the proper way. Chips cut and cooked on the premises. The thing we&rsquo;re known for &mdash; ask any regular.</div>
+          <div class="menu__tag">our specialty</div>
+        </div>
+        <div class="menu__group">
+          <div class="menu__name">Takeaway</div>
+          <div class="menu__desc">Wrapped up, ready to walk home with. Ring ahead on <a href="tel:+441553772001" style="text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--batter)">01553 772001</a> to skip the queue at teatime.</div>
+          <div class="menu__tag">phone or in&nbsp;person</div>
+        </div>
+        <div class="menu__group">
+          <div class="menu__name">Eat In</div>
+          <div class="menu__desc">A small seating area &mdash; sit down with a portion straight out of the fryer, the way it&rsquo;s meant to be eaten.</div>
+          <div class="menu__tag">seats available</div>
+        </div>
+        <div class="menu__group">
+          <div class="menu__name">Delivery</div>
+          <div class="menu__desc">Available across the King&rsquo;s Lynn area through <strong>Just Eat</strong> and <strong>Deliveroo</strong>. Hours and coverage are managed by the platforms.</div>
+          <div class="menu__tag">Just Eat &middot; Deliveroo</div>
+        </div>
+      </div>
+
+      <div class="howto reveal">
+        <div class="howto__card">
+          <div class="howto__num">i.</div>
+          <h3 class="howto__title">Walk in</h3>
+          <p class="howto__body">19 Loke Road, just off North Lynn Industrial Estate. Open Thu&ndash;Sat, 11&ndash;7:30.</p>
+        </div>
+        <div class="howto__card">
+          <div class="howto__num">ii.</div>
+          <h3 class="howto__title">Phone ahead</h3>
+          <p class="howto__body"><a href="tel:+441553772001">01553 772001</a>. Ring for a takeaway and pick up when it&rsquo;s ready.</p>
+        </div>
+        <div class="howto__card">
+          <div class="howto__num">iii.</div>
+          <h3 class="howto__title">Order online</h3>
+          <p class="howto__body">Search &ldquo;Loke Fish Bar&rdquo; on Just Eat or Deliveroo for delivery to your door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── GALLERY (PLACEHOLDER) ───────────── -->
+  <section class="slab slab--navy" id="gallery">
+    <div class="slab__inner">
+      <div class="section-head reveal">
+        <span class="section-head__num" style="color:var(--batter)">03 /</span>
+        <h2 class="section-head__title">From the shop.</h2>
+      </div>
+      <div class="gallery__empty reveal">
+        <p class="gallery__line">Photographs to follow.</p>
+        <p class="gallery__sub">Got a snap of a cracking portion? Send it to us &mdash; we&rsquo;ll put it up here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── CONTACT ───────────── -->
+  <section class="slab slab--cream" id="contact">
+    <div class="slab__inner">
+      <div class="section-head reveal">
+        <span class="section-head__num">04 /</span>
+        <h2 class="section-head__title">Find us.</h2>
+      </div>
+
+      <div class="contact__grid reveal">
+        <div class="contact__col">
+          <h3>Loke Fish Bar</h3>
+          <ul class="contact__list">
+            <li>
+              <span class="label">Phone</span>
+              <span class="value"><a href="tel:+441553772001">01553 772001</a></span>
+            </li>
+            <li>
+              <span class="label">Address</span>
+              <span class="value">19 Loke Road<br>King&rsquo;s Lynn<br>Norfolk &middot; PE30 2AY</span>
+            </li>
+            <li>
+              <span class="label">Delivery</span>
+              <span class="value">Just Eat &middot; Deliveroo</span>
+            </li>
+          </ul>
+
+          <div class="hours">
+            <h4 class="hours__title">Opening hours</h4>
+            <ul class="hours__list">
+              <li class="closed"><span class="day">Sun</span><span>Closed</span></li>
+              <li class="closed"><span class="day">Mon</span><span>Closed</span></li>
+              <li class="closed"><span class="day">Tue</span><span>Closed</span></li>
+              <li class="closed"><span class="day">Wed</span><span>Closed</span></li>
+              <li><span class="day">Thu</span><span>11:00 &ndash; 19:30</span></li>
+              <li><span class="day">Fri</span><span>11:00 &ndash; 19:30</span></li>
+              <li><span class="day">Sat</span><span>11:00 &ndash; 19:30</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact__col">
+          <h3>Map &middot; PE30 2AY</h3>
+          <div class="map">
+            <iframe
+              src="https://maps.google.com/maps?q=19%20Loke%20Road%2C%20King%27s%20Lynn%20PE30%202AY&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing 19 Loke Road, King's Lynn PE30 2AY"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__name">Loke Fish Bar<span class="gold">.</span></div>
+    <div class="foot__grid">
+      <div class="foot__col">
+        <h4>Where</h4>
+        <p>19 Loke Road<br>King&rsquo;s Lynn<br>Norfolk PE30 2AY</p>
+      </div>
+      <div class="foot__col">
+        <h4>When</h4>
+        <p>Thursday &ndash; Saturday<br>11:00 &ndash; 19:30<br><em>Closed Sunday &ndash; Wednesday</em></p>
+      </div>
+      <div class="foot__col">
+        <h4>How</h4>
+        <p><a href="tel:+441553772001">01553 772001</a><br>or order on Just Eat &amp; Deliveroo</p>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>&copy; Loke Fish Bar &middot; King&rsquo;s Lynn</span>
+      <span>Cod &middot; chips &middot; the proper way</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
